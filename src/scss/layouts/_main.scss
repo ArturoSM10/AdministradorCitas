@@ -1,2 +1,162 @@
 @use '../base/variables' as v;
 @use '../components/mixins' as m;
+
+.main__contenedor {
+    background-color: v.$blanco;
+    padding: 4rem;
+    width: 80%;
+
+    @include m.tablet { 
+        @include m.grid(2, 1rem);
+    }
+}
+
+.form {
+    margin-bottom: 5rem;
+
+    @include m.tablet { 
+        margin-bottom: 0;
+    }
+    legend {
+        font-size: 2.4rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+    }
+    fieldset {
+        border: none;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        @include m.tablet { 
+            gap: 1rem;
+        }
+
+        label {
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            @include m.tablet { 
+                flex-basis: 30%;
+            };
+        }
+
+        &:last-of-type {
+            label {
+                align-self: baseline;
+            }
+        }
+
+        input, 
+        textarea {
+            flex-basis: 70%;
+            border: 1px solid v.$border;
+            color: v.$letra;
+            padding: 1rem;
+            font-size: 1.4rem;
+            box-shadow: inset 2px 3px 4px 0px v.$border;
+            @include m.tablet { 
+                flex: 1;
+            }
+        }
+
+        textarea {
+            height: 20rem;
+            resize: vertical;
+        }
+
+    }
+
+    .submit {
+        @include m.boton(#28B62C, v.$blanco, uppercase);
+        padding: 1rem;
+        font-size: 1.4rem;
+        box-shadow: 0px 0.5rem 1px 0px v.$verdeBtn;
+        border-radius: 0.3rem;
+    }
+}
+
+.administrador {
+    &__title {
+        font-weight: 500;
+        text-transform: capitalize;
+        @include m.tablet { 
+            margin-top: 0;
+        }
+    }
+
+    &__ul {
+        padding-left: 1.5rem;
+        list-style-type: none;    }
+
+    &__li {
+        margin-bottom: 1rem;
+
+        h3 {
+            font-size: 2.8rem;
+            text-transform: capitalize;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        span {
+            font-weight: 400;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            &-eliminar {
+                @include m.boton(v.$alertaRojo, v.$blanco, uppercase);
+                box-shadow: 0px 0.5rem 1px 0px #ff291d;
+            }
+            
+            &-editar {
+                @include m.boton(#75caeb, v.$blanco, uppercase);
+                box-shadow: 0px 0.5rem 1px 0px #5fc1e8;
+            }
+            svg {
+                color: v.$blanco;
+                width: 2.5rem;
+            }
+
+            display: flex;
+            width: fit-content;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1.4rem;
+            border-radius: 0.3rem;
+
+        }
+    }
+}
+
+
+.alerta {
+    text-align: center;
+    color: v.$blanco;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    &.incorrecto {
+        background-color: v.$alertaRojo;
+        box-shadow: 0px 0.5rem 1px 0px #ff291d;
+    }
+    &.correcto {
+        background-color: v.$alertaVerde;
+        box-shadow: 0px 0.5rem 1px 0px v.$verdeBtn;
+    }
+}
