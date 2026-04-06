@@ -1,0 +1,10 @@
+export const form = document.querySelector(`.form`);
+export const mascotaInput = document.querySelector(`#mascota`);
+export const propietarioInput = document.querySelector(`#propietario`);
+export const telefonoInput = document.querySelector(`#telefono`);
+export const fechaInput = document.querySelector(`#fecha`);
+export const horaInput = document.querySelector(`#hora`);
+export const sintomasInput = document.querySelector(`#sintomas`);
+export const main = document.querySelector(`.main`);
+export const etiquetaUl = document.querySelector(`.administrador__ul`);
+export const editarBtnSubmit = document.querySelector(`.submit`);
