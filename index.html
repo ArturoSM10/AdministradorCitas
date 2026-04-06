@@ -11,64 +11,50 @@
     <header class="header">
         <h1 class="header__title">Administrador de pacientes de veterinaria</h1>
     </header>
-    <main class="main__contenedor">
-        <form class="form">
-            <legend>Datos del paciente</legend>
-            <fieldset class="datos">
-                <div class="campo">
-                    <label for="nombre-mascota">Nombre mascota: </label>
-                    <input placeholder="Nombre mascota" type="text" name="mascota" id="nombre-mascota">
-                </div>
-                
-                <div class="campo">
-                    <label for="propietario">Propietario: </label>
-                    <input placeholder="Nombre dueño de la mascota" type="text" name="propietario" id="propietario">
-                </div>
-
-                <div class="campo">
-                    <label for="telefono">telefono: </label>
-                    <input placeholder="Numero de teléfono" type="text" name="telefono" id="telefono">
-                </div>
-
-                <div class="campo">
-                    <label for="fecha">fecha: </label>
-                    <input type="date" name="fecha" id="fecha">
-                </div>
-
-                <div class="campo">
-                    <label for="hora">Hora: </label>
-                    <input type="time" name="hora" id="hora">
-                </div>
-
-                <div class="campo">
-                    <label for="sintomas">Sintomas: </label>
-                    <textarea name="sintomas" id="sintomas"></textarea>
-                </div>
-            </fieldset>
-            <button class="submit" type="submit">Crear cita</button>
-        </form>
-
-        <section class="administrador">
-            <h2 class="administrador__title">Administra tus citas</h2>
-            <ul class="administrador__ul">
-                <li class="administrador__li">
-                    <h3>Perro</h3>
-                    <p>Nombre: <span>nombre</span></p>
-                    <p>Telefono: <span>numeros</span></p>
-                    <p>Fecha: <span>9999-99-99</span></p>
-                    <p>Hora: <span>99:99</span></p>
-                    <p>Sintomas: <span>ninguno</span></p>
-                    <div class="btn-container">
-                        <a class="btn btn-eliminar" href="#">Eliminar 
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </a>
-                        <a class="btn btn-editar" href="#">Editar 
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
-                        </a>
+    <main class="main">
+        <div class="main__contenedor">
+            <form class="form">
+                <legend>Datos del paciente</legend>
+                <fieldset class="datos">
+                    <div class="campo">
+                        <label for="mascota">Nombre mascota: </label>
+                        <input placeholder="Nombre mascota" type="text" name="mascota" id="mascota">
                     </div>
-                </li>
-            </ul>
-        </section>
+                    
+                    <div class="campo">
+                        <label for="propietario">Propietario: </label>
+                        <input placeholder="Nombre dueño de la mascota" type="text" name="propietario" id="propietario">
+                    </div>
+    
+                    <div class="campo">
+                        <label for="telefono">telefono: </label>
+                        <input placeholder="Numero de teléfono" type="tel" name="telefono" id="telefono">
+                    </div>
+    
+                    <div class="campo">
+                        <label for="fecha">fecha: </label>
+                        <input type="date" name="fecha" id="fecha">
+                    </div>
+    
+                    <div class="campo">
+                        <label for="hora">Hora: </label>
+                        <input type="time" name="hora" id="hora">
+                    </div>
+    
+                    <div class="campo">
+                        <label for="sintomas">Sintomas: </label>
+                        <textarea name="sintomas" id="sintomas"></textarea>
+                    </div>
+                </fieldset>
+                <button class="submit" type="submit">Crear cita</button>
+            </form>
+    
+            <section class="administrador">
+                <h2 class="administrador__title">Administra tus citas</h2>
+                <ul class="administrador__ul">
+                </ul>
+            </section>
+        </div>
     </main>
     <script src="./dist/js/app.js"></script>
 </body>

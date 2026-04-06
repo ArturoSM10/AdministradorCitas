@@ -1,15 +1,19 @@
 @use '../base/variables' as v;
 @use '../components/mixins' as m;
 
-.main__contenedor {
+.main {
     background-color: v.$blanco;
     padding: 4rem;
     width: 80%;
+    margin: 0 auto;
 
-    @include m.tablet { 
-        @include m.grid(2, 1rem);
+    .main__contenedor {
+        @include m.tablet { 
+            @include m.grid(2, 1rem);
+        }
     }
 }
+
 
 .form {
     margin-bottom: 5rem;
@@ -150,7 +154,7 @@
     color: v.$blanco;
     padding: 1rem;
     border-radius: 0.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     &.incorrecto {
         background-color: v.$alertaRojo;
         box-shadow: 0px 0.5rem 1px 0px #ff291d;
