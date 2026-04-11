@@ -1,7 +1,7 @@
-import { leerEventos } from './funciones.js';
+import { cargarPagina } from './funciones.js';
 
 ( function() {
 
-    document.addEventListener(`DOMContentLoaded`, leerEventos);
+    document.addEventListener(`DOMContentLoaded`, cargarPagina);
 }
 )();
